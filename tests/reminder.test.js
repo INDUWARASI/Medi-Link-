@@ -249,8 +249,9 @@ console.log('\nFilter – getRemindersForPatient');
 console.log('\nMultiple reminders per patient');
 {
   const store = makeStore();
-  ['Meds', 'Appointment', 'Exercise', 'Other'].forEach((title, i) => {
-    addReminder(store, { patientId: 'p1', title, type: 'medication', date: `2030-06-0${i+1}`, time: '08:00', notes: '' });
+  ['Meds', 'Appointment', 'Exercise', 'Other'].forEach(function(title, i) {
+    var day = String(i + 1).padStart(2, '0');
+    addReminder(store, { patientId: 'p1', title: title, type: 'medication', date: '2030-06-' + day, time: '08:00', notes: '' });
   });
   assert(getRemindersForPatient(store, 'p1').length === 4, 'supports multiple reminders per patient');
 }

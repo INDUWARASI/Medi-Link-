@@ -1,6 +1,9 @@
 /**
  * Medi-Link – Caregiver Reminder System
  * All data is persisted in localStorage so it survives page refreshes.
+ * NOTE: localStorage is used for client-side persistence in this demo application.
+ * In a production system, sensitive patient data should be stored server-side
+ * with appropriate authentication, encryption, and access controls.
  */
 
 'use strict';
@@ -544,7 +547,7 @@ const App = (() => {
     }
 
     const patients = loadPatients();
-    patients.push({ id: generateId(), name, age: age ? parseInt(age, 10) : '', condition });
+    patients.push({ id: generateId(), name, age: age ? parseInt(age, 10) : null, condition });
     savePatients(patients);
     closeModal('modal-patient');
     showToast(`Patient "${name}" added.`, 'success');
@@ -583,7 +586,7 @@ const App = (() => {
         if (Notification && Notification.permission === 'granted') {
           new Notification('Medi-Link Reminder', {
             body: `${meta.icon} ${r.title}`,
-            icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💊</text></svg>',
+            icon: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💊</text></svg>'),
           });
         }
       }
