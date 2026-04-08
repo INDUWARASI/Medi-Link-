@@ -28,3 +28,63 @@ This app was built with a strong focus on **Visual Excellence**:
 - **Color Palette:** Features a trustworthy deep teal (`#006B70`), combined with energetic corals, gentle cyans, and clean white backgrounds.
 - **Typography:** Powered by `Google Fonts (Inter)` for high readability and a premium feel.
 - **Experience:** Floating Action Buttons (FAB), custom Bottom Navigation, and visually distinct cards keep the workflow frictionless.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (latest stable version)
+- Dart SDK
+- Android Studio / VS Code (with Flutter extensions)
+
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/MediLink.git
+   cd MediLink
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Run the App:**
+   ```bash
+   flutter run
+   ```
+
+*(Note: If you want to test both Patient and Caregiver interfaces, the app supports dynamic routing based on the login email provided).*
+
+---
+
+## 📁 Project Structure highlights
+- `/lib/`
+  - `login_screen.dart` - Unified authentication entry point.
+  - `dashboard_screen.dart` - Main dashboard for the **Patient** interface.
+  - `caregiver_dashboard_screen.dart` - Main dashboard for the **Caregiver** interface.
+  - `schedule_tab.dart` & `caregiver_schedule_screen.dart` - Timeline interfaces for tracking doses.
+  - `reports_tab.dart` - Patient health analytics.
+
+---
+
+## 🛠️ Technology Stack
+- **Framework:** Flutter
+- **Language:** Dart
+- **Typography:** `google_fonts` package
+- **State Management:** Stateful Widgets (Core Flutter)
+
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! 
+Feel free to check the [issues page](https://github.com/yourusername/MediLink/issues).
+
+---
+
+## 📝 License
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+
+---
+*Built with ❤️ for better healthcare management.*
