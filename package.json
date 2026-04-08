@@ -1,0 +1,11 @@
+{
+  "name": "medi-link",
+  "version": "1.0.0",
+  "description": "Medi-Link – Caregiver reminder system for patients",
+  "main": "index.html",
+  "scripts": {
+    "test": "node tests/reminder.test.js"
+  },
+  "keywords": ["healthcare", "caregiver", "reminders", "patients"],
+  "license": "MIT"
+}
